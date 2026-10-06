@@ -1,0 +1,76 @@
+<!-- static/description/index.html -->
+<section class="oe_container" style="font-family: 'Montserrat', sans-serif;">
+    <div class="row oe_spaced" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border-radius: 15px; padding: 40px; color: white;">
+        <div class="col-12 text-center">
+            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; color: #ffffff; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                Disable <span style="color: #38bdf8; text-shadow: none;">Screensaver</span>
+            </h1>
+            <p style="font-size: 1.4rem; font-weight: 400; color: #94a3b8;">Повне вимкнення режиму очікування SaverScreen у точці продажу Odoo 18</p>
+            <div style="height: 4px; width: 80px; background: #38bdf8; margin: 20px auto; box-shadow: 0 2px 4px rgba(56, 189, 248, 0.4);"></div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 text-center">
+            <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; height: 100%;">
+                <i class="fa fa-desktop" style="font-size: 3rem; color: #38bdf8; margin-bottom: 15px;"></i>
+                <h4 style="font-weight: 700;">Безперервна Робота</h4>
+                <p class="text-muted">Екран каси більше не затемнюється і не переходить у режим очікування незалежно від часу простою.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; height: 100%;">
+                <i class="fa fa-bolt" style="font-size: 3rem; color: #38bdf8; margin-bottom: 15px;"></i>
+                <h4 style="font-weight: 700;">Швидкий Доступ</h4>
+                <p class="text-muted">Касиру не потрібно повторно торкатися екрана або рухати мишею для виходу із заставки.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; height: 100%;">
+                <i class="fa fa-code" style="font-size: 3rem; color: #38bdf8; margin-bottom: 15px;"></i>
+                <h4 style="font-weight: 700;">Безпечний Патч OWL</h4>
+                <p class="text-muted">Модифікація виконана за офіційними стандартами через функцію patch() над прототипом PosStore.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row oe_spaced mt-5">
+        <div class="col-md-6" style="padding: 30px;">
+            <h3 style="font-weight: 700; color: #1e293b; margin-bottom: 25px;">Інструкція встановлення:</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 12px;"><i class="fa fa-check-circle" style="color: #10b981; margin-right: 10px;"></i> <b>Розміщення:</b> Розмістіть модуль у каталозі <code>/opt/custom_addons</code>.</li>
+                <li style="margin-bottom: 12px;"><i class="fa fa-check-circle" style="color: #10b981; margin-right: 10px;"></i> <b>Оновлення списку:</b> Увімкніть режим розробника та натисніть "Оновити список додатків".</li>
+                <li style="margin-bottom: 12px;"><i class="fa fa-check-circle" style="color: #10b981; margin-right: 10px;"></i> <b>Встановлення:</b> Знайдіть модуль "DTN: PoS Disable Screensaver" та натисніть "Встановити".</li>
+                <li style="margin-bottom: 12px;"><i class="fa fa-check-circle" style="color: #10b981; margin-right: 10px;"></i> <b>Перезапуск сесії:</b> Перезавантажте відкриту POS-сесію касира в браузері (Ctrl+F5).</li>
+            </ul>
+        </div>
+        <div class="col-md-6" style="background: #f8fafc; border-radius: 15px; padding: 30px;">
+            <h3 style="font-weight: 700; color: #1e293b; margin-bottom: 25px;">Технічні особливості:</h3>
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #38bdf8; margin-bottom: 15px;">
+                <code style="color: #ef4444;">[Odoo 18 Assets]</code> <b>Підключення ассетів:</b> Використання бандлу <code>point_of_sale._assets_pos</code> замість застарілих веб-бандлів.
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #38bdf8; margin-bottom: 15px;">
+                <i class="fa fa-clock-o" style="margin-right: 5px;"></i> <b>Таймаути неактивності:</b> Перевизначення геттера <code>idleTimeout</code> із поверненням порожнього масиву <code>[]</code>.
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #38bdf8;">
+                <i class="fa fa-shield" style="margin-right: 5px;"></i> <b>Стабільність:</b> Не змінює цілісність сесій, збереження замовлень чи роботу платіжних терміналів.
+            </div>
+        </div>
+    </div>
+
+    <div class="row oe_spaced" style="border-top: 1px solid #e2e8f0; padding-top: 40px;">
+        <div class="col-12 text-center">
+            <p style="font-size: 1.1rem; color: #1e293b; font-weight: 500; margin-bottom: 10px;">
+                Developed by <a href="https://github.com/drauthran" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 700; transition: color 0.3s;">Drauthran</a>
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; font-size: 1.2rem;">
+                <a href="mailto:drauthran@gmail.com" style="color: #64748b; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#64748b'">
+                    <i class="fa fa-envelope"></i> drauthran@gmail.com
+                </a>
+                <a href="https://t.me/drauthran" target="_blank" style="color: #64748b; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#64748b'">
+                    <i class="fa fa-telegram"></i> @drauthran
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
